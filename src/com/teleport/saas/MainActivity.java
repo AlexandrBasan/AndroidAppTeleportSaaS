@@ -1,5 +1,5 @@
 package com.teleport.saas;
-
+//rails - отключено для Teleport SaaS Rails 3.0
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -65,9 +65,9 @@ public class MainActivity extends Activity {
 //    double latitude; // latitude
 //    double longitude; // longitude  
 	// GPSTracker class
-	GPSTracker gps;
-	Teleport_user_profile_activity UP;
-	ReadData RD;
+//rails	GPSTracker gps;
+//rails	Teleport_user_profile_activity UP;
+//rails	ReadData RD;
 	Widget WI;
 	
 	
@@ -100,8 +100,8 @@ public class MainActivity extends Activity {
         CookieManager cookieManager = CookieManager.getInstance();
         cookieManager.setAcceptCookie(true);
     	// указываем страницу загрузки
-       mWebView.loadUrl("http://saas.teleport-ds.com/");  //work server
-        // mWebView.loadUrl("http://teleport-manager.pp.ua/"); //test server
+       // mWebView.loadUrl("http://saas.teleport-ds.com/");  //work server
+        mWebView.loadUrl("http://ec2-54-245-114-39.us-west-2.compute.amazonaws.com:3000/signin"); //test server
        
       
         
@@ -169,9 +169,9 @@ public class MainActivity extends Activity {
  			mWebView.reload();
  			break;
  		}
- 		case R.id.menu_send_location_manual: {
+//rails 		case R.id.menu_send_location_manual: {
  			
- 				 GPSdetermination();
+//rails 				 GPSdetermination();
  				 //new PostData().execute();
  				 // PostData task = new PostData(MainActivity.this);
  				 // task.execute();
@@ -182,31 +182,31 @@ public class MainActivity extends Activity {
  		//		 String UserPass = RD.readSavedDataPass(); //Test
  		//		 Toast.makeText(getApplicationContext(), UserInfo, Toast.LENGTH_LONG).show(); //Test
  		//		 Toast.makeText(getApplicationContext(), UserPass, Toast.LENGTH_LONG).show(); //Test
- 		         new PostData(gps, RD, getBaseContext()).execute();
+//rails 		         new PostData(gps, RD, getBaseContext()).execute();
  				 
  				// postData(); - вызывает ошибку на реальном устройстве
- 		         Toast.makeText(getApplicationContext(), R.string.location_send_manuall_toast, Toast.LENGTH_LONG).show();
- 			break;
- 		}
- 		case R.id.menu_settings: {
- 			 Intent settingsActivity = new Intent(getBaseContext(),
- 	                    Preferences.class);
- 	            startActivity(settingsActivity); 
- 			break;
- 		}
- 		case R.id.menu_wallets: {
- 			mWebView.loadUrl("http://saas.teleport-ds.com/user/funds/deposit");
-			break;
-		}
- 		case R.id.menu_user_profile: {
- 			Intent launchNewIntent = new Intent(MainActivity.this,Teleport_user_profile_activity.class);
- 			startActivityForResult(launchNewIntent, 0);
- 			break;
- 		}
- 		case R.id.enable_disable_gps: {
- 			startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
- 		break;
- 	}
+//rails 		         Toast.makeText(getApplicationContext(), R.string.location_send_manuall_toast, Toast.LENGTH_LONG).show();
+//rails 			break;
+//rails 		}
+//rails 		case R.id.menu_settings: {
+//rails 			 Intent settingsActivity = new Intent(getBaseContext(),
+//rails 	                    Preferences.class);
+//rails 	            startActivity(settingsActivity); 
+//rails 			break;
+//rails 		}
+//rails 		case R.id.menu_wallets: {
+//rails 			mWebView.loadUrl("http://saas.teleport-ds.com/user/funds/deposit");
+//rails			break;
+//rails		}
+//rails 		case R.id.menu_user_profile: {
+//rails 			Intent launchNewIntent = new Intent(MainActivity.this,Teleport_user_profile_activity.class);
+//rails 			startActivityForResult(launchNewIntent, 0);
+//rails 			break;
+//rails 		}
+//rails 		case R.id.enable_disable_gps: {
+//rails 			startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+//rails 		break;
+//rails 	}
  		case R.id.menu_exit: {
  			onDestroy();  
  			break;
@@ -282,9 +282,9 @@ public class MainActivity extends Activity {
 //              this.unregisterReceiver(receiver);
 //              gps.stopUsingGPS();
        //Останавливаем наш сервис определения координат при выходе из приложения кнопкой Exit в меню 10_06_2013
-         Intent intentstop = new Intent(this,GPSTracker.class);
-         stopService(intentstop);
-         Log.d("Service Stoped", stopService(intentstop) + "");
+//rails        Intent intentstop = new Intent(this,GPSTracker.class);
+//rails         stopService(intentstop);
+//rails         Log.d("Service Stoped", stopService(intentstop) + "");
 
 //     	Toast.makeText(getApplicationContext(), "service STOP", Toast.LENGTH_LONG).show();
   	        System.runFinalizersOnExit(true);
@@ -368,26 +368,26 @@ public class MainActivity extends Activity {
    
 /////////////////////////////////////////////////////////////////////////////////блок определения местоположения/////////////////////
      //просто выводит информацию о местоположении в виде Toast
-     public void GPSdetermination() {		
+//rails     public void GPSdetermination() {		
     	 // create class object
-    	 gps = new GPSTracker(MainActivity.this);
+//rails    	 gps = new GPSTracker(MainActivity.this);
 
     	 // check if GPS enabled		
-    	 if(gps.canGetLocation()){
+//rails    	 if(gps.canGetLocation()){
 
-    		 double latitude = gps.getLatitude();
-    		 double longitude = gps.getLongitude();
+//rails    		 double latitude = gps.getLatitude();
+//rails    		 double longitude = gps.getLongitude();
 
     		 // \n is for new line
-    		 Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();	
-    	 }else{
+//rails    		 Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();	
+//rails    	 }else{
     		 // can't get location
     		 // GPS or Network is not enabled
     		 // Ask user to enable GPS/network in settings
-    		 gps.showSettingsAlert();
-    	 }
+//rails    		 gps.showSettingsAlert();
+//rails    	 }
 
-     }
+//rails     }
 
 
 	@Override
@@ -402,37 +402,37 @@ public class MainActivity extends Activity {
 	 	
 		//10_06_2013
 		//Останавливаем наш сервис определения координат
-		Intent intentstop = new Intent(this,GPSTracker.class);
-    	stopService(intentstop);
-    	Log.d("Service Stoped", stopService(intentstop) + "");
+//rails		Intent intentstop = new Intent(this,GPSTracker.class);
+//rails    	stopService(intentstop);
+//rails    	Log.d("Service Stoped", stopService(intentstop) + "");
 //    	Toast.makeText(getApplicationContext(), "service STOP", Toast.LENGTH_LONG).show(); //Test
 		//Стартуем наш сервис определения координат
-    	Intent intentstart = new Intent(this,GPSTracker.class);
-		startService(intentstart);
-		Log.d("Service Started", startService(intentstart) + "");
+//rails    	Intent intentstart = new Intent(this,GPSTracker.class);
+//rails		startService(intentstart);
+//rails		Log.d("Service Started", startService(intentstart) + "");
 //		Toast.makeText(getApplicationContext(), "service START", Toast.LENGTH_LONG).show(); //Test
 		// Gets the user's network preference settings
-        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+//rails        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         //Здесь берутся из настроек Параметры отвечающие за позиционирования разрешено или нет
-    	Boolean GPSnotif = sharedPrefs.getBoolean("location_share_enordis", true);
+//rails    	Boolean GPSnotif = sharedPrefs.getBoolean("location_share_enordis", true);
 		//проверяем наличие файла если его нет то координаты не отправляются 12_06_2013 //______This block work
-		String FILELOGIN = "TeleportSAASUser.txt";
-		File filelogin = getBaseContext().getFileStreamPath(FILELOGIN);
-		if (filelogin.exists()) {
+//rails		String FILELOGIN = "TeleportSAASUser.txt";
+//rails		File filelogin = getBaseContext().getFileStreamPath(FILELOGIN);
+//rails		if (filelogin.exists()) {
     	//______This block work
 		
-    	if (GPSnotif.equals(true)) {
-    		GPSdetermination();
-    		new PostData(gps, RD, getBaseContext()).execute();
-    		Toast.makeText(getApplicationContext(), R.string.location_send_toast, Toast.LENGTH_LONG).show();
-        }
-        else {
-        	Toast.makeText(getApplicationContext(), R.string.share_location_NO, Toast.LENGTH_LONG).show();
-        }
-		}
-		else {
-        	Toast.makeText(getApplicationContext(), R.string.check_user_profile_toast, Toast.LENGTH_LONG).show();
-        }
+//rails    	if (GPSnotif.equals(true)) {
+//rails    		GPSdetermination();
+//rails    		new PostData(gps, RD, getBaseContext()).execute();
+//rails    		Toast.makeText(getApplicationContext(), R.string.location_send_toast, Toast.LENGTH_LONG).show();
+//rails        }
+//rails        else {
+//rails        	Toast.makeText(getApplicationContext(), R.string.share_location_NO, Toast.LENGTH_LONG).show();
+//rails        }
+//rails		}
+//rails		else {
+//rails        	Toast.makeText(getApplicationContext(), R.string.check_user_profile_toast, Toast.LENGTH_LONG).show();
+//rails        }
 		
 	} 
 
@@ -440,15 +440,15 @@ public class MainActivity extends Activity {
 ////////////////////////////////////////////////////////////////ON RESUME/////////////////////////////////////////////////////////////////
 
      
-	private boolean isMyServiceGPSTrackerRunning() {
-	    ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-	    for (RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
-	        if (GPSTracker.class.getName().equals(service.service.getClassName())) {
-	            return true;
-	        }
-	    }
-	    return false;
-	}
+//rails	private boolean isMyServiceGPSTrackerRunning() {
+//rails	    ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+//rails	    for (RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
+//rails	        if (GPSTracker.class.getName().equals(service.service.getClassName())) {
+//rails	            return true;
+//rails	        }
+//rails	    }
+//rails	    return false;
+//rails	}
      
      
      
