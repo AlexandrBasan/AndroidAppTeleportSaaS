@@ -1,0 +1,106 @@
+<resources>
+
+    <string name="app_name">Teleport SAAS</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- Menu -->
+    <string name="menu_settings">Settings</string>
+    <string name="menu_about">About us</string>
+    <string name="menu_user_profile">User profile</string>
+    <string name="menu_login">Login</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_update_page">Reload Page</string>
+    <string name="menu_send_location_manual">Send location manually</string>
+    <string name="menu_exit">Exit</string>
+    <string name="menu_enable_disable_gps">Enable/Disable GPS</string>
+     <string name="menu_wallets">Fill up the balance</string>
+
+    <!-- Label -->
+    <string name="loading">Loading&#8230;</string>
+    <string name="title_activity_main">Teleport SAAS System</string>
+    <string name="preferences_activity">Teleport SAAS System Settings</string>
+    <string name="location_send_toast">Your location is sent to Teleport SAAS System</string>
+    <string name="location_send_manuall_toast">Your location is sent manually to Teleport SAAS System</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="courierID">You Courier ID</string>
+    <string name="courierIDexample">example: 245566</string>
+    <string name="loginexample">Your e-mail</string>
+    <string name="passexample">************</string>
+    <string name="courierIDInfo">If you are an co-worker of the Delivery Company, enter in this field your ID.</string>
+    <string name="Button_ok">Save</string>
+    <string name="Button_cancel">Cancel</string>
+    <string name="user_saved">User information saved</string>
+    <string name="Textforuser_login_page">Registered users can fill in their account settings for location sending and obtaining orders.</string>
+    <string name="login_page_load_info">Download information about the current user</string>
+    <string name="dont_have_accaunt">Do not have an account? - Sign up</string>
+    <string name="check_user_profile_toast">Location data not sent. Check your settings (Menu - User Profile)</string>
+    <string name="send_location_widget">Teleport</string>
+    
+    
+
+    <!-- Settings -->
+    <string name="GPS_status">Location status auto update</string>
+    <string name="GPS_share_location">Share your location</string>
+    <string name="GPS_share_location_info">Send your GPS or GSM location to Teleport SAAS System</string>
+    <string name="share_location_YES">YES, Share my location</string>
+    <string name="share_location_NO">You turned off your location sending in the application Settings.</string>
+    <string name="data_transmission_only_wifi">Transmission data only Wi-Fi</string>
+    <string name="wifi_data_transmission">Data transmission network</string>
+    <string name="wifi_data_transmission_info">Data transmission only Wi-Fi or Any network</string>
+    <string name="settings_cyclecount_GPS">GPS Location update</string>
+    <string name="settings_cyclecount_GPS_description">Location updates time (in minutes)</string>
+    <string name="notification_on_off">Receive notification</string>
+    <string name="notification">Notifications (Beta)</string>
+    <string name="notification_info">You will be notified of new inquiries and other important events</string>
+
+    <!-- Address format -->
+    <string name="address_output_string">%1$s %2$s %3$s</string>
+
+    <!-- Latitude, longitude format -->
+    <string name="latitude_longitude">%1$.8f, %2$.8f</string>
+
+    <!-- Error or Warning Label -->
+    <string name="connection_error">Unable to load data by Wi-Fi. Check your network connection. Perhaps in the application configuration is set to work only through Wi-Fi connection. To work correctly, the application must be rebooted
+(Menu-Exit).</string>
+    <string name="lost_connection">Lost connection.</string>
+    <string name="wifi_connected">Wi-Fi reconnected.</string>
+    <string name="WiFi_setting">Data transmission Settings (Beta)</string>
+    <string name="ANY_network">On any network</string>
+    <string name="location_lost">Your location is not defined.</string>
+
+    <!-- Messages -->
+    <string name="connected">Client connected</string>
+    <string name="connection_error_code_unknown">Unknown connection error code:  %1$d</string>
+    <string name="connection_failed">Connection failed</string>
+    <string name="disconnected">Client disconnected</string>
+    <string name="get_address">Get Address</string>
+    <string name="get_location">Get Location</string>
+    <string name="illegal_argument_exception">        Illegal arguments: Latitude %1$.8f Longitude %2$.8f</string>
+    <string name="invalid_action">Invalid intent action %1$s</string>
+    <string name="invalid_integer_id">Invalid integer request ID: %1$s</string>
+    <string name="IO_Exception_getFromLocation">IO Exception in Geocoder.getFromLocation()</string>
+    <string name="location_requested">Periodic updates requested</string>
+    <string name="location_updated">Location updated</string>
+    <string name="location_update_error">Location update failed</string>
+    <string name="location_update_error_detail">        Location update error. code %1$d message %2$s</string>
+    <string name="location_update_missing_update">        Location update error. No incoming location.</string>
+    <string name="location_updates_stopped">Periodic updates stopped</string>
+    <string name="log_new_location">New location: %1$s</string>
+    <string name="no_address_found">No address found for location</string>
+    <string name="no_connection">No connection: Cannot request location</string>
+    <string name="no_geocoder_available">Cannot get address. No geocoder available.</string>
+    <string name="no_location_available">Location not available</string>
+    <string name="resolved">Error resolved. Please re-try operation.</string>
+    <string name="no_resolution">Google Play services: unable to resolve connection error.</string>
+    <string name="periodic_update_stop">Stopping periodic updates</string>
+    <string name="play_services_available">Google Play services is available</string>
+    <string name="request_location_updates_in_progress">        Can\'t request location updates, previous request hasn\'t finished</string>
+    <string name="start_updates">Start Updates</string>
+    <string name="stop_updates">Stop Updates</string>
+    <string name="unknown">--Unknown--</string>
+    <string name="unknown_activity_request_code">        Received an unknown activity request code %1$d in onActivityResult.</string>
+
+    <string name="title_teleport_user_profile_activity">Teleport SAAS user profile</string>
+
+</resources>

@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/login"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editTextlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:text="@string/loginexample" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextlogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/password"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editTextpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextlogin"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:text="@string/passexample" />
+
+    <Button
+        android:id="@+id/buttonsavelogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextCourierID"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/editTextpassword"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="125dp"
+        android:onClick="buttonsavelogin_Click"
+        android:text="@string/Button_ok" />
+
+    <Button
+        android:id="@+id/buttoncancellogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonsavelogin"
+        android:layout_alignBottom="@+id/buttonsavelogin"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignRight="@+id/editTextpassword"
+        android:layout_marginLeft="25dp"
+        android:onClick="buttoncancellogin_Click"
+        android:text="@string/Button_cancel" />
+
+    <Button
+        android:id="@+id/buttonloadinfouser"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonsavelogin"
+        android:layout_alignRight="@+id/buttoncancellogin"
+        android:layout_below="@+id/buttonsavelogin"
+        android:layout_marginTop="10dp"
+        android:onClick="buttonloadinfouser_Click"
+        android:text="@string/login_page_load_info" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonloadinfouser"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:onClick="onClickRegister"
+        android:text="@string/dont_have_accaunt"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/blue" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/textView4"
+        android:layout_marginTop="5dp"
+        android:text="@string/Textforuser_login_page"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextpassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="@string/courierID"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+   <EditText
+       android:id="@+id/editTextCourierID"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignLeft="@+id/editTextlogin"
+       android:layout_below="@id/textView5"
+       android:layout_marginTop="5dp"
+       android:ems="10"
+       android:text="@string/courierIDexample" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editTextpassword"
+        android:layout_marginTop="10dp"
+        android:text="@string/courierIDInfo" />
+
+</RelativeLayout>

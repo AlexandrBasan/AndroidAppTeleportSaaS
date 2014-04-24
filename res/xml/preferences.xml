@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:a2dp="http://schemas.android.com/apk/res/com.teleportds.teleportsaas;">
+      <PreferenceCategory android:title="@string/GPS_status">
+        <CheckBoxPreference android:key="location_share_enordis"
+           android:title="@string/GPS_share_location"
+           android:summary="@string/GPS_share_location_info"
+           android:defaultValue="true"/>
+        <ListPreference
+            android:title="@string/settings_cyclecount_GPS"
+            android:summary="@string/settings_cyclecount_GPS_description"
+            android:key="cyclecount_GPS" 
+            android:numeric="integer"
+            android:defaultValue="600000"
+            android:entries="@array/settings_udate_data_location_Interval"
+            android:entryValues="@array/settings_udate_data_location_Interval_Values" />
+       </PreferenceCategory>
+       
+       <PreferenceCategory android:title="@string/WiFi_setting">
+        <ListPreference
+        android:title="@string/wifi_data_transmission"
+        android:summary="@string/wifi_data_transmission_info"
+        android:key="listPref"
+        android:defaultValue="@string/ANY_network"
+        android:entries="@array/listArray"
+        android:entryValues="@array/listValues" />
+       </PreferenceCategory>
+       
+        <PreferenceCategory android:title="@string/notification">
+       <CheckBoxPreference android:key="important_Notifications"
+           android:title="@string/notification_on_off"
+           android:summary="@string/notification_info"
+           android:defaultValue="false"/>
+        
+       </PreferenceCategory>
+</PreferenceScreen>

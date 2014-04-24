@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="schemas.android.com/apk/res/android"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android1:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android1:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android1:padding="8dp" >
+
+    <ImageView
+        android1:id="@+id/update_service_work"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_marginRight="2dp"
+        android1:layout_marginTop="9dp"
+        android1:src="@drawable/indicatorred24" />
+    
+     <TextView
+         android:id="@+id/update_location_widget_Teleport_text"
+         style="@android:style/TextAppearance.Medium"
+         android:layout_width="match_parent"
+         android1:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android1:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:layout_margin="4dip"
+         android:gravity="center_horizontal|center_vertical"
+         android:text="@string/send_location_widget"
+         android1:paddingTop="4dp"
+         android1:text="@string/send_location_widget" >
+
+    </TextView>
+    
+    <ImageButton
+        android1:id="@+id/imageButton1"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:background="@drawable/teleport_50_50" />
+
+</LinearLayout>
