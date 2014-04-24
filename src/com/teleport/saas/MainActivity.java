@@ -100,8 +100,8 @@ public class MainActivity extends Activity {
         CookieManager cookieManager = CookieManager.getInstance();
         cookieManager.setAcceptCookie(true);
     	// указываем страницу загрузки
-       // mWebView.loadUrl("http://saas.teleport-ds.com/");  //work server
-        mWebView.loadUrl("http://ec2-54-245-114-39.us-west-2.compute.amazonaws.com:3000/signin"); //test server
+        mWebView.loadUrl("http://saas.teleport-ds.com/");  //work server
+      //  mWebView.loadUrl("http://ec2-54-245-114-39.us-west-2.compute.amazonaws.com:3000/signin"); //test server
        
       
         
